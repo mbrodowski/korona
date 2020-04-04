@@ -1,0 +1,10 @@
+insert into warehouses (city, x, y, rice, pasta, water) values ('Gdańsk', 18, 54, 'false','true','true');
+insert into warehouses (city, x, y, rice, pasta, water) values ('Białystok', 23, 53, 'true','true','false');
+insert into warehouses (city, x, y, rice, pasta, water) values ('Warszawa', 21, 52, 'true','true','true');
+insert into warehouses (city, x, y, rice, pasta, water) values ('Kraków', 20, 50, 'false','true','true');
+insert into warehouses (city, x, y, rice, pasta, water) values ('Szczecin', 14, 53, 'true','true','true');
+insert into warehouses (city, x, y, rice, pasta, water) values ('Wrocław', 17, 51, 'true','true','false');
+insert into warehouses (city, x, y, rice, pasta, water) values ('Poznań', 17, 52, 'false','true','false');
+insert into warehouses (city, x, y, rice, pasta, water) values ('Lublin', 22, 51, 'true','false','true');
+insert into warehouses (city, x, y, rice, pasta, water) values ('Zielona Góra', 15, 51, 'true','true','true');
+insert into warehouses (city, x, y, rice, pasta, water) values ('Łódź', 19, 51, 'false','false','true');

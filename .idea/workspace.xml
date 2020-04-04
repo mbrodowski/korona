@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9e49f832-022f-4348-a199-0dd2cb13a5b6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Zq0SrdfbqktexK1tIQashH3IKI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\resources\db" />
+      <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dev.onichimiuk.marcin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\resources\db\migration" />
+      <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\resources" />
+      <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\java\dev\onichimiuk\marcin" />
+      <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.onichimiuk.marcin.App" />
+      <module name="korona" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.onichimiuk.marcin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarehouseService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.onichimiuk.marcin.warehouse.WarehouseService" />
+      <module name="korona" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.onichimiuk.marcin.warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.WarehouseService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e49f832-022f-4348-a199-0dd2cb13a5b6" name="Default Changelist" comment="" />
+      <created>1585551319620</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585551319620</updated>
+      <workItem from="1585551322822" duration="25668000" />
+      <workItem from="1585642620877" duration="31713000" />
+      <workItem from="1585724660523" duration="4579000" />
+      <workItem from="1585750023678" duration="122000" />
+      <workItem from="1585762200088" duration="7242000" />
+      <workItem from="1585810272972" duration="1499000" />
+      <workItem from="1586008434526" duration="7528000" />
+      <workItem from="1586022461094" duration="750000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1585569435568">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Assign_Data_Sources/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1585569435568" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1585561089436">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1585561089436" />
+    <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585578451976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1585578451976" />
+    <state width="1876" height="307" key="GridCell.Tab.0.bottom" timestamp="1586023257129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="307" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586023257129" />
+    <state width="1876" height="307" key="GridCell.Tab.0.center" timestamp="1586023257129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="307" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586023257129" />
+    <state width="1876" height="307" key="GridCell.Tab.0.left" timestamp="1586023257129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="307" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586023257129" />
+    <state width="1876" height="307" key="GridCell.Tab.0.right" timestamp="1586023257129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="307" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586023257129" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1586022602230">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586022602230" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586022466795">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586022466795" />
+    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1586022539614">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586022539614" />
+  </component>
+</project>
