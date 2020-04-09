@@ -8,23 +8,33 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "warehouses")
-class Warehouse {
+public class Warehouse {
     @Id
-    @GeneratedValue(generator="inc")
-    @GenericGenerator(name="inc", strategy = "increment")
-    private  Integer id;
-    private  String city;
-    private  Integer x;
-    private  Integer y;
-    private  Boolean rice;
-    private  Boolean pasta;
-    private  Boolean water;
+    @GeneratedValue(generator = "inc")
+    @GenericGenerator(name = "inc", strategy = "increment")
+    private Integer id;
+    private String city;
+    private Integer x;
+    private Integer y;
+    private Integer rice;
+    private Integer pasta;
+    private Integer water;
 
     /**
      * Hibernate needs it. (JPA)
      */
     @SuppressWarnings("unused")
     public Warehouse() {
+    }
+
+    public Warehouse(Integer id, String city, Integer x, Integer y, Integer... productsAmount) {
+        this.id = id;
+        this.city = city;
+        this.x = x;
+        this.y = y;
+        rice = productsAmount[0];
+        pasta = productsAmount[1];
+        water = productsAmount[2];
     }
 
     public Integer getId() {
@@ -59,27 +69,27 @@ class Warehouse {
         this.y = y;
     }
 
-    public Boolean getRice() {
+    public Integer getRice() {
         return rice;
     }
 
-    public void setRice(Boolean rice) {
+    public void setRice(Integer rice) {
         this.rice = rice;
     }
 
-    public Boolean getPasta() {
+    public Integer getPasta() {
         return pasta;
     }
 
-    public void setPasta(Boolean pasta) {
+    public void setPasta(Integer pasta) {
         this.pasta = pasta;
     }
 
-    public Boolean getWater() {
+    public Integer getWater() {
         return water;
     }
 
-    public void setWater(Boolean water) {
+    public void setWater(Integer water) {
         this.water = water;
     }
 }

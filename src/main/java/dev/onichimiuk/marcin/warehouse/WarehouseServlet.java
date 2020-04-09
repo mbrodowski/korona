@@ -9,8 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
-@WebServlet(name="Warehouse", urlPatterns = {"/api/warehouses/*"})
+@WebServlet(name = "Warehouse", urlPatterns = {"/api/warehouses/*"})
 public class WarehouseServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(HttpServlet.class);
 
@@ -25,32 +26,36 @@ public class WarehouseServlet extends HttpServlet {
         this(new WarehouseService(), new ObjectMapper());
     }
 
-    WarehouseServlet(WarehouseService service, ObjectMapper mapper) {
+    public WarehouseServlet(WarehouseService service, ObjectMapper mapper) {
         this.service = service;
         this.mapper = mapper;
     }
 
-    // Jako zmienne x, y - przyjąłem zaokrąglone współrzędne geograficzne miast Polski
-    // np. Bydgoszcz  18°00'E  53°07'N  ma współrzędne x = 18, y = 53.
+    // Jako zmienne x, y - przyjąłem współrzędne geograficzne miast Polski ze stopniami i minutami bez znaczników
+    // np. Bydgoszcz  18°00'E  53°07'N  ma współrzędne x = 1800, y = 5307.
     // Współrzędne zamawiającego i wybór paramterów obsłużyłem tymczasowo w GUI pod localhostem:8777
-    // należy zmienić URL w hibernate.cfg.xml na swój adres do pliku db.mv.db <property name="connection.url">jdbc:h2:file:C:\marcin.onichimiuk\MavenDEV\korona\db</property>
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        logger.info("WarehouseServlet GET request with parameters: " + req.getParameterMap());
-        resp.setContentType("application/json;charset=UTF-8");
+        var requestParameterMap = req.getParameterMap();
+        logger.info("WarehouseServlet GET request with parameters: " + requestParameterMap);
 
-        List<Boolean> userChoices = new ArrayList<>(); // narazie zamokowana baza z 3 produktami
-        userChoices.add(Boolean.valueOf(req.getParameter("rice")));
-        userChoices.add(Boolean.valueOf(req.getParameter("pasta")));
-        userChoices.add(Boolean.valueOf(req.getParameter("water")));
-//        userChoices.add(Boolean.valueOf(req.getParameter("kolejnyProdukt")));
+        var productsMap = requestParameterMap.entrySet()
+                .stream()
+                .filter(f -> !f.getKey().equals("x") & !f.getKey().equals("y") & Integer.parseInt(f.getValue()[0])!=0)
+                .collect(Collectors.toMap(Map.Entry::getKey, e -> Integer.parseInt(e.getValue()[0])));
 
         var x = Integer.valueOf(req.getParameter("x"));
         var y = Integer.valueOf(req.getParameter("y"));
-        var b = userChoices.toArray(Boolean[]::new);
 
-        var response = service.findNearestConfiguration(x, y, b);
-        mapper.writeValue(resp.getOutputStream(), response);
-        logger.info("WarehouseServlet GET response:\n" + mapper.writerWithDefaultPrettyPrinter().writeValueAsString(response));
+        try {
+            resp.setContentType("application/json;charset=UTF-8");
+            var response = service.findNearestConfiguration(x, y, productsMap);
+            mapper.writeValue(resp.getOutputStream(), response);
+            logger.info("WarehouseServlet GET response:\n" + mapper.writerWithDefaultPrettyPrinter().writeValueAsString(response));
+        } catch (Exception e) {
+            resp.setContentType("text/html;charset=UTF-8");
+            mapper.writeValue(resp.getOutputStream(), e.getMessage());
+        }
+
     }
 }

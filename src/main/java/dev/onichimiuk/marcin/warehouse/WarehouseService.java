@@ -1,47 +1,56 @@
 package dev.onichimiuk.marcin.warehouse;
 
+import java.lang.reflect.Method;
 import java.util.*;
-import java.util.stream.Collectors;
 
-class WarehouseService {
+public class WarehouseService {
     private WarehouseRepository repository;
 
-    WarehouseService() {
+    public WarehouseService() {
         this(new WarehouseRepository());
     }
 
-    WarehouseService(WarehouseRepository repository) {
+    public WarehouseService(WarehouseRepository repository) {
         this.repository = repository;
     }
 
-    //Szukanie najbliższej konfiguracji zasobów w magazynach. Na liście mogą byc zarówno pełne magazyny, magazyny z częścią produktów lub lista może być pusta,
-    // gdy nie ma magazynów z szukanym produktem. Na wejściu położenie zamawiającego (x ,y) oraz tablica wyborów produktów z listy np. b=[true,false,true]. Czyli rise=true; pasta=false; water=true
-    List<Warehouse> findNearestConfiguration(Integer x, Integer y, Boolean... b) {
-            List<Warehouse> warehouseList = new ArrayList<>();
-            var allWarehouses = repository.findAll();
-            if (b[0]) warehouseList.add(findNearestOfList(allWarehouses.stream().filter(Warehouse::getRice).collect(Collectors.toList()), x, y));
-            if (b[1]) warehouseList.add(findNearestOfList(allWarehouses.stream().filter(Warehouse::getPasta).collect(Collectors.toList()), x, y));
-            if (b[2]) warehouseList.add(findNearestOfList(allWarehouses.stream().filter(Warehouse::getWater).collect(Collectors.toList()), x, y));
-//            if (b[3]) warehouseList.add(findNearestOfList(allWarehouses.stream().filter(f -> f.getNastępnyGetter()==b[3]).collect(Collectors.toList()), x, y));
+    //Zwracanie listy najbliższych magazynów gdzie można dostać zamówione produkty w podanej ilości. Gdy nie ma jakiegoś produktu
+    //zwracany jest błąd biznesowy z komunikatem, że w takiej ilości brakuje produktu w magazynach. Na wejściu przekazuje się
+    //współrzędne zamawiającego oraz mapę zamówienia produktów np.  key:rice value:78, key:pasta value:14.
+    public List<Warehouse> findNearestConfiguration(Integer x, Integer y, Map<String, Integer> map) throws Exception {
+        var warehouseList = repository.findAll();
+        List<Warehouse> cumulatedTemporaryList = new ArrayList<>();
 
-            HashSet<String> hashSet = new HashSet<>();
-            List<Warehouse> uniqueList = new ArrayList<>();
+        for (Map.Entry<String,Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey()+" "+entry.getValue());
+            List<Warehouse> temporaryList = new ArrayList<>();
+            String methodName = "get" + entry.getKey().substring(0,1).toUpperCase() + entry.getKey().substring(1);
+            Method currentGetter = Warehouse.class.getMethod(methodName);
+
             for (Warehouse w : warehouseList) {
-                if( w!=null && hashSet.add(w.getCity()) ) uniqueList.add(w);
+                int i = (Integer) currentGetter.invoke(w);
+                if (i >= entry.getValue()){
+                    temporaryList.add(w);
+                    System.out.println(w.getCity());
+                }
             }
-            return uniqueList;
-    }
 
-    // Metoda przydatna do wykorzystania w zadaniu z kurierem by najpierw sprawdzić czy są blisko pełne magazyny od zamawijącego,
-    // a później jeśli zbyt daleko to odpytać o najbliższe zasoby poprzez findNearestConfiguration.
-    //Zwracanie najbliżej położonego pełnego magazynu od miejsca pobytu szukającego (x, y) lub null gdy takiego brak.
-    Warehouse findNearestFullWarehouse(Integer x, Integer y) {
-        var fullWarehouses = repository.findAll()
-                .stream()
-                .filter(f -> f.getRice() & f.getWater() & f.getPasta()) // & f.getNastępnyGetter()  Narazie zamockowana baza z 3 produktami
-                .collect(Collectors.toList());
+            try{
+                findNearestOfList(temporaryList,x,y).getCity();
+            } catch (NullPointerException e){
+                String errorMessage = "Produkt "+entry.getKey()+" nie występuje w ilości "+entry.getValue()+" w żadnym magazynie. Zmodyfikuj zamówienie.";
+                throw new NullPointerException(errorMessage);
+            }
 
-        return findNearestOfList(fullWarehouses, x, y);
+            cumulatedTemporaryList.add(findNearestOfList(temporaryList, x, y));
+        }
+
+        HashSet<String> hashSet = new HashSet<>();
+        List<Warehouse> uniqueList = new ArrayList<>();
+        for (Warehouse w : cumulatedTemporaryList) {
+            if (w != null && hashSet.add(w.getCity())) uniqueList.add(w);
+        }
+        return uniqueList;
     }
 
     //Obliczanie odległości na płaszczyźnie między punktem (x1, y1) i (x2, y2).

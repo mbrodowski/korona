@@ -3,7 +3,7 @@ create table warehouses (
     city varchar(100) not null,
     x int,
     y int,
-    rice boolean not null,
-    pasta boolean not null,
-    water boolean not null,
+    rice int,
+    pasta int,
+    water int,
 );

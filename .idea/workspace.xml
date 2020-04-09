@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e49f832-022f-4348-a199-0dd2cb13a5b6" name="Default Changelist" comment="" />
+    <list default="true" id="9e49f832-022f-4348-a199-0dd2cb13a5b6" name="Default Changelist" comment="1 iteracja zmian">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/onichimiuk/marcin/warehouse/WarehouseServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_warehouses_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_warehouses_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_warehouse.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_warehouse.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +29,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -32,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mavenstart" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
@@ -50,7 +69,7 @@
       <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.WarehouseServiceTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.onichimiuk.marcin.App" />
       <module name="korona" />
@@ -77,9 +96,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WarehouseServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="korona" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.onichimiuk.marcin.warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.onichimiuk.marcin.warehouse" />
+      <option name="MAIN_CLASS_NAME" value="dev.onichimiuk.marcin.warehouse.WarehouseServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarehouseServiceTest.test_findNearestConfiguration_x_y_map_returnsNearestWarehouses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="korona" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.onichimiuk.marcin.warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.onichimiuk.marcin.warehouse" />
+      <option name="MAIN_CLASS_NAME" value="dev.onichimiuk.marcin.warehouse.WarehouseServiceTest" />
+      <option name="METHOD_NAME" value="test_findNearestConfiguration_x_y_map_returnsNearestWarehouses" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WarehouseServiceTest" />
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.WarehouseServiceTest.test_findNearestConfiguration_x_y_map_returnsNearestWarehouses" />
         <item itemvalue="Application.WarehouseService" />
       </list>
     </recent_temporary>
@@ -102,7 +154,21 @@
       <workItem from="1585810272972" duration="1499000" />
       <workItem from="1586008434526" duration="7528000" />
       <workItem from="1586022461094" duration="750000" />
+      <workItem from="1586191800694" duration="11951000" />
+      <workItem from="1586203917291" duration="104000" />
+      <workItem from="1586253040929" duration="17010000" />
+      <workItem from="1586341814888" duration="9482000" />
+      <workItem from="1586416245370" duration="12874000" />
+      <workItem from="1586435761139" duration="386000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1586026259399</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586026259399</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,47 +178,74 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="test" />
+    <MESSAGE value="1 iteracja zmian" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 iteracja zmian" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1585569435568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Assign_Data_Sources/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1585569435568" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1585561089436">
+    <state x="552" y="178" width="816" height="774" key="#Intentions" timestamp="1586428769970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1585561089436" />
+    <state x="552" y="178" width="816" height="774" key="#Intentions/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586428769970" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1586425080142">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586425080142" />
     <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585578451976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1585578451976" />
-    <state width="1876" height="307" key="GridCell.Tab.0.bottom" timestamp="1586023257129">
+    <state x="146" y="142" width="1698" height="811" key="CommitChangelistDialog2" timestamp="1586436163931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="307" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586023257129" />
-    <state width="1876" height="307" key="GridCell.Tab.0.center" timestamp="1586023257129">
+    <state x="146" y="142" width="1698" height="811" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586436163931" />
+    <state x="219" y="113" key="DiffContextDialog" timestamp="1586435987102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="307" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586023257129" />
-    <state width="1876" height="307" key="GridCell.Tab.0.left" timestamp="1586023257129">
+    <state x="219" y="113" key="DiffContextDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435987102" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1586423075746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="307" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586023257129" />
-    <state width="1876" height="307" key="GridCell.Tab.0.right" timestamp="1586023257129">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586423075746" />
+    <state width="1876" height="292" key="GridCell.Tab.0.bottom" timestamp="1586435639499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="307" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586023257129" />
+    <state width="1876" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435639499" />
+    <state width="1876" height="292" key="GridCell.Tab.0.center" timestamp="1586435639499">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="292" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435639499" />
+    <state width="1876" height="292" key="GridCell.Tab.0.left" timestamp="1586435639499">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="292" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435639499" />
+    <state width="1876" height="292" key="GridCell.Tab.0.right" timestamp="1586435639499">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="292" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435639499" />
+    <state x="775" y="258" key="RollbackChangesDialog" timestamp="1586435989748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="775" y="258" key="RollbackChangesDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435989748" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1586022602230">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586022602230" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586022466795">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586026518178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586022466795" />
-    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1586022539614">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586026518178" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586435857085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586022539614" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435857085" />
+    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1586435500856">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435500856" />
   </component>
 </project>
