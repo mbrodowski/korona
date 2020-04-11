@@ -1,6 +1,7 @@
 package dev.onichimiuk.marcin.warehouse;
 
 import dev.onichimiuk.marcin.HibernateUtil;
+import dev.onichimiuk.marcin.warehouse.model.Warehouse;
 import java.util.List;
 
 public class WarehouseRepository {

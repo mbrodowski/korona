@@ -1,6 +1,7 @@
 package dev.onichimiuk.marcin.warehouse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import dev.onichimiuk.marcin.geolocation.GeoLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.servlet.annotation.WebServlet;

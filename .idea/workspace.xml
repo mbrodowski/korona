@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e49f832-022f-4348-a199-0dd2cb13a5b6" name="Default Changelist" comment="" />
+    <list default="true" id="9e49f832-022f-4348-a199-0dd2cb13a5b6" name="Default Changelist" comment="1 iteracja zmian (clear roboczy)">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/geolocation/GeoLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/geolocation/GeoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_warehouses_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_warehouses_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_warehouse.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_warehouse.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/onichimiuk/marcin/warehouse/WarehouseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/onichimiuk/marcin/warehouse/WarehouseServiceTest.java" afterDir="false" />
+    </list>
+    <list id="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" name="1 iteracja zmian" comment="Poprawki Mateusza w iteracji 2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/model/ProductStock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/model/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/Warehouse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +39,38 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseServlet.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="9e49f832-022f-4348-a199-0dd2cb13a5b6" />
+        <range start1="49" end1="49" start2="50" end2="57" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="51" end1="52" start2="59" end2="60" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <ranges>
+        <range start1="12" end1="13" start2="12" end2="12" changelist="9e49f832-022f-4348-a199-0dd2cb13a5b6" />
+        <range start1="34" end1="35" start2="33" end2="35" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/dev/onichimiuk/marcin/warehouse/WarehouseService.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="2" changelist="9e49f832-022f-4348-a199-0dd2cb13a5b6" />
+        <range start1="4" end1="4" start2="3" end2="7" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="6" end1="7" start2="9" end2="9" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="8" end1="11" start2="10" end2="12" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="12" end1="15" start2="13" end2="15" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="18" end1="20" start2="18" end2="20" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="21" end1="22" start2="21" end2="22" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="24" end1="28" start2="24" end2="24" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="29" end1="36" start2="25" end2="31" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="37" end1="42" start2="32" end2="35" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="43" end1="51" start2="36" end2="40" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="52" end1="53" start2="41" end2="42" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+        <range start1="54" end1="77" start2="43" end2="43" changelist="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -33,10 +88,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mavenstart" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/db/migration" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -48,12 +104,13 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\resources\db\migration" />
+      <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\lombok" />
+      <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\java" />
       <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\resources" />
       <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main\java\dev\onichimiuk\marcin" />
-      <recent name="C:\marcin.onichimiuk\MavenDEV\korona\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WarehouseServiceTest">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.onichimiuk.marcin.App" />
       <module name="korona" />
@@ -72,7 +129,7 @@
       <module name="korona" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.onichimiuk.marcin.warehouse.*" />
+          <option name="PATTERN" value="dev.onichimiuk.marcin.geolocation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,7 +141,7 @@
       <module name="korona" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.onichimiuk.marcin.warehouse.*" />
+          <option name="PATTERN" value="dev.onichimiuk.marcin.geolocation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,7 +156,7 @@
       <module name="korona" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.onichimiuk.marcin.warehouse.*" />
+          <option name="PATTERN" value="dev.onichimiuk.marcin.geolocation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,8 +170,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WarehouseServiceTest" />
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.WarehouseServiceTest" />
         <item itemvalue="JUnit.WarehouseServiceTest.test_findNearestConfiguration_x_y_map_returnsNearestWarehouses" />
         <item itemvalue="Application.WarehouseService" />
       </list>
@@ -126,6 +183,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9e49f832-022f-4348-a199-0dd2cb13a5b6" name="Default Changelist" comment="" />
+      <changelist id="d93e1aa1-9fbe-4c19-8f0d-b3250b15bda2" name="1 iteracja zmian" comment="Poprawki Mateusza w iteracji 2" />
       <created>1585551319620</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -143,7 +201,14 @@
       <workItem from="1586253040929" duration="17010000" />
       <workItem from="1586341814888" duration="9482000" />
       <workItem from="1586416245370" duration="12874000" />
-      <workItem from="1586435761139" duration="674000" />
+      <workItem from="1586435761139" duration="1178000" />
+      <workItem from="1586437902165" duration="2729000" />
+      <workItem from="1586445828751" duration="3975000" />
+      <workItem from="1586504427202" duration="4378000" />
+      <workItem from="1586508866532" duration="21757000" />
+      <workItem from="1586531474455" duration="250000" />
+      <workItem from="1586532006144" duration="797000" />
+      <workItem from="1586600950375" duration="6387000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1586026259399</created>
@@ -159,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586436227315</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1 iteracja zmian (clear roboczy)">
+      <created>1586436680324</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586436680324</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +244,8 @@
     </ignored-roots>
     <MESSAGE value="test" />
     <MESSAGE value="1 iteracja zmian" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 iteracja zmian" />
+    <MESSAGE value="1 iteracja zmian (clear roboczy)" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 iteracja zmian (clear roboczy)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1585569435568">
@@ -183,61 +256,105 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" width="816" height="774" key="#Intentions/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586428769970" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1586425080142">
+    <state x="552" y="178" key="#SQL_Dialects" timestamp="1586515334673">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586425080142" />
+    <state x="552" y="178" key="#SQL_Dialects/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586515334673" />
+    <state x="552" y="178" width="1153" height="683" key="#SQL_Resolution_Scopes" timestamp="1586515217083">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" width="1153" height="683" key="#SQL_Resolution_Scopes/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586515217083" />
+    <state x="719" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586531697085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="719" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586531697085" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1586506649686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586506649686" />
     <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585578451976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1585578451976" />
-    <state x="146" y="142" width="1698" height="811" key="CommitChangelistDialog2" timestamp="1586436226023">
+    <state x="146" y="142" width="1698" height="811" key="CommitChangelistDialog2" timestamp="1586606991501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="146" y="142" width="1698" height="811" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586436226023" />
-    <state x="219" y="113" key="DiffContextDialog" timestamp="1586436389646">
+    <state x="146" y="142" width="1698" height="811" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586606991501" />
+    <state x="219" y="113" width="1536" height="860" key="DiffContextDialog" timestamp="1586606936958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="219" y="113" key="DiffContextDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586436389646" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1586423075746">
+    <state x="219" y="113" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586606936958" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1586504695163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586423075746" />
-    <state width="1876" height="292" key="GridCell.Tab.0.bottom" timestamp="1586435639499">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586504695163" />
+    <state width="1876" height="292" key="GridCell.Tab.0.bottom" timestamp="1586607452644">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435639499" />
-    <state width="1876" height="292" key="GridCell.Tab.0.center" timestamp="1586435639499">
+    <state width="1876" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586607452644" />
+    <state width="1876" height="292" key="GridCell.Tab.0.center" timestamp="1586607452644">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="292" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435639499" />
-    <state width="1876" height="292" key="GridCell.Tab.0.left" timestamp="1586435639499">
+    <state width="1876" height="292" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586607452644" />
+    <state width="1876" height="292" key="GridCell.Tab.0.left" timestamp="1586607452628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="292" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435639499" />
-    <state width="1876" height="292" key="GridCell.Tab.0.right" timestamp="1586435639499">
+    <state width="1876" height="292" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586607452628" />
+    <state width="1876" height="292" key="GridCell.Tab.0.right" timestamp="1586607452644">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="292" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435639499" />
+    <state width="1876" height="292" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586607452644" />
+    <state width="1876" height="387" key="GridCell.Tab.1.bottom" timestamp="1586527595174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="387" key="GridCell.Tab.1.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586527595174" />
+    <state width="1876" height="387" key="GridCell.Tab.1.center" timestamp="1586527595174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="387" key="GridCell.Tab.1.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586527595174" />
+    <state width="1876" height="387" key="GridCell.Tab.1.left" timestamp="1586527595174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="387" key="GridCell.Tab.1.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586527595174" />
+    <state width="1876" height="387" key="GridCell.Tab.1.right" timestamp="1586527595174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="387" key="GridCell.Tab.1.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586527595174" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1586505007442">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586505007442" />
     <state x="775" y="258" key="RollbackChangesDialog" timestamp="1586435989748">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="775" y="258" key="RollbackChangesDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435989748" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1586022602230">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1586508819888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586022602230" />
-    <state x="552" y="253" width="1191" height="534" key="Vcs.Push.Dialog.v2" timestamp="1586436420071">
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586508819888" />
+    <state width="200" height="441" key="SqlResolveConfigurable" timestamp="1586515208312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" width="1191" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586436420071" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586435857085">
+    <state width="200" height="441" key="SqlResolveConfigurable/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586515208312" />
+    <state x="552" y="253" width="1191" height="534" key="Vcs.Push.Dialog.v2" timestamp="1586436692226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435857085" />
-    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1586435500856">
+    <state x="552" y="253" width="1191" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586436692226" />
+    <state x="941" y="62" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1586515250934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586435500856" />
+    <state x="941" y="62" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586515250934" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586600977035">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586600977035" />
+    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1586607446296">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="841" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586607446296" />
+    <state x="749" y="179" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1586504810744">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="749" y="179" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1586504810744" />
   </component>
 </project>

@@ -1,7 +1,10 @@
 package dev.onichimiuk.marcin.warehouse;
 
+import dev.onichimiuk.marcin.geolocation.GeoLocation;
+import dev.onichimiuk.marcin.warehouse.model.Warehouse;
 import org.junit.Test;
 import java.util.*;
+import java.util.stream.Collectors;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -15,12 +18,14 @@ public class WarehouseServiceTest {
         Map<String, Integer> map = new TreeMap<>();
         map.put("pasta",15);
         Integer x = 1928; Integer y = 5147; // Łódź
+        GeoLocation location = new GeoLocation() { @Override public long getX() { return x; } @Override public long getY() { return y; } };
 
         //when
-        var result = SUT.findNearestConfiguration(x,y,map);
+        var result = SUT.findNearestConfiguration(location,map);
 
         //then
-        assertEquals("Wrocław", result.get(0).getCity());
+        List<Warehouse> resultList = new ArrayList<>(result);
+        assertEquals("Wrocław", resultList.get(0).getCity());
     }
 
     @Test
@@ -31,9 +36,10 @@ public class WarehouseServiceTest {
         Map<String, Integer> map = new TreeMap<>();
         map.put("rice",20); map.put("pasta",50); map.put("water",25);
         Integer x = 1530; Integer y = 5156; // Zielona Góra
+        GeoLocation location = new GeoLocation() { @Override public long getX() { return x; } @Override public long getY() { return y; } };
 
         //when
-        var result = SUT.findNearestConfiguration(x,y,map);
+        var result = SUT.findNearestConfiguration(location,map);
 
         //then
         assertTrue(result.removeIf(w -> w.getCity().equals("Wrocław")));
@@ -49,9 +55,10 @@ public class WarehouseServiceTest {
         var SUT = new WarehouseService(mockRepository); //System Under Test
         Map<String, Integer> map = new TreeMap<>();
         Integer x = 1928; Integer y = 5147; // Łódź
+        GeoLocation location = new GeoLocation() { @Override public long getX() { return x; } @Override public long getY() { return y; } };
 
         //when
-        var result = SUT.findNearestConfiguration(x,y,map);
+        var result = SUT.findNearestConfiguration(location,map);
 
         //then
         assertEquals(0, result.size());
@@ -65,10 +72,11 @@ public class WarehouseServiceTest {
         Map<String, Integer> map = new TreeMap<>();
         map.put("pasta",9999);
         Integer x = 1928; Integer y = 5147; // Łódź
+        GeoLocation location = new GeoLocation() { @Override public long getX() { return x; } @Override public long getY() { return y; } };
 
         //when then
         try{
-            var result = SUT.findNearestConfiguration(x,y,map);
+            var result = SUT.findNearestConfiguration(location,map);
         } catch (NullPointerException e){
             assertEquals("Produkt pasta nie występuje w ilości 9999 w żadnym magazynie. Zmodyfikuj zamówienie.", e.getMessage());
         }
@@ -78,14 +86,9 @@ public class WarehouseServiceTest {
         return new WarehouseRepository(){
             @Override
             public List<Warehouse> findAll() {
-                List<Warehouse> warehouseList = new ArrayList<>();
-                warehouseList.add(new Warehouse(1,"Wrocław", 1702, 5107, 71, 44,0));
-                warehouseList.add(new Warehouse(2,"Gdańsk", 1838, 5422, 0,16,53));
-                warehouseList.add(new Warehouse(3,"Białystok", 2310, 5308, 22,54,0));
-                warehouseList.add(new Warehouse(4,"Warszawa", 2102, 5212, 76,12,33));
-                warehouseList.add(new Warehouse(5,"Lublin", 2234, 5156, 82,0,25));
-
-                return warehouseList;
+                return super.findAll().stream()
+                        .filter(f-> f.getCity().equals("Wrocław") | f.getCity().equals("Gdańsk") | f.getCity().equals("Białystok") | f.getCity().equals("Warszawa"))
+                        .collect(Collectors.toList());
             }
         };
     }
