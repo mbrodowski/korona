@@ -1,77 +1,44 @@
 package dev.onichimiuk.marcin.warehouse;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import dev.onichimiuk.marcin.geolocation.GeoService;
+import dev.onichimiuk.marcin.warehouse.model.Warehouse;
+import dev.onichimiuk.marcin.geolocation.GeoLocation;
 
 public class WarehouseService {
-    private WarehouseRepository repository;
 
-    public WarehouseService() {
-        this(new WarehouseRepository());
-    }
+    WarehouseService(WarehouseRepository repository){ this.repository = repository; }
+    WarehouseService(){ repository = new WarehouseRepository(); }
 
-    public WarehouseService(WarehouseRepository repository) {
-        this.repository = repository;
-    }
+    WarehouseRepository repository;
+    GeoService geoService = new GeoService();
 
     //Zwracanie listy najbliższych magazynów gdzie można dostać zamówione produkty w podanej ilości. Gdy nie ma jakiegoś produktu
     //zwracany jest błąd biznesowy z komunikatem, że w takiej ilości brakuje produktu w magazynach. Na wejściu przekazuje się
-    //współrzędne zamawiającego oraz mapę zamówienia produktów np.  key:rice value:78, key:pasta value:14.
-    public List<Warehouse> findNearestConfiguration(Integer x, Integer y, Map<String, Integer> map) throws Exception {
+    //lokacje zamawiającego oraz mapę zamówienia produktów np.  key:rice value:78, key:pasta value:14.
+    public Set<Warehouse> findNearestConfiguration(GeoLocation location, Map<String, Integer> map) throws Exception {
         var warehouseList = repository.findAll();
-        List<Warehouse> cumulatedTemporaryList = new ArrayList<>();
+        Set<Warehouse> cumulatedWarehouses = new HashSet<>();
 
         for (Map.Entry<String,Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey()+" "+entry.getValue());
-            List<Warehouse> temporaryList = new ArrayList<>();
-            String methodName = "get" + entry.getKey().substring(0,1).toUpperCase() + entry.getKey().substring(1);
-            Method currentGetter = Warehouse.class.getMethod(methodName);
 
-            for (Warehouse w : warehouseList) {
-                int i = (Integer) currentGetter.invoke(w);
-                if (i >= entry.getValue()){
-                    temporaryList.add(w);
-                    System.out.println(w.getCity());
-                }
+            List<Warehouse> warehousesWithProduct = warehouseList.stream()
+                    .filter(w -> w.getProductStocks()
+                            .stream()
+                            .filter(productStock -> productStock.getProductCode().equals(entry.getKey()))
+                            .anyMatch(productStock -> productStock.getAmount() >= entry.getValue()))
+                    .collect(Collectors.toList());
+
+            Warehouse nearestWarehouse = geoService.findNearestOfList(warehousesWithProduct, location);
+            if (nearestWarehouse != null) {
+                cumulatedWarehouses.add(nearestWarehouse);
             }
-
-            try{
-                findNearestOfList(temporaryList,x,y).getCity();
-            } catch (NullPointerException e){
+            else {
                 String errorMessage = "Produkt "+entry.getKey()+" nie występuje w ilości "+entry.getValue()+" w żadnym magazynie. Zmodyfikuj zamówienie.";
                 throw new NullPointerException(errorMessage);
             }
-
-            cumulatedTemporaryList.add(findNearestOfList(temporaryList, x, y));
         }
-
-        HashSet<String> hashSet = new HashSet<>();
-        List<Warehouse> uniqueList = new ArrayList<>();
-        for (Warehouse w : cumulatedTemporaryList) {
-            if (w != null && hashSet.add(w.getCity())) uniqueList.add(w);
-        }
-        return uniqueList;
-    }
-
-    //Obliczanie odległości na płaszczyźnie między punktem (x1, y1) i (x2, y2).
-    private Integer calculateDistance(Integer x1, Integer y1, Integer x2, Integer y2) {
-        return (int) Math.sqrt((Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)));
-    }
-
-    //Szukanie najbliższego magazynu z podanej listy od miejsca pobytu szukającego (x, y) lub null gdy lista pusta.
-    private Warehouse findNearestOfList(List<Warehouse> warehousesList, Integer x, Integer y) {
-        if (warehousesList.size() > 0) {
-            Warehouse nearest = new Warehouse();
-            int minimum = Integer.MAX_VALUE;
-            for (Warehouse i : warehousesList) {
-                var check = calculateDistance(i.getX(), i.getY(), x, y);
-                if (check < minimum) {
-                    minimum = check;
-                    nearest = i;
-                }
-            }
-            return nearest;
-        } else {
-            return null;
-        }
+        return cumulatedWarehouses;
     }
 }

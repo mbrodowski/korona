@@ -48,9 +48,16 @@ public class WarehouseServlet extends HttpServlet {
         var x = Integer.valueOf(req.getParameter("x"));
         var y = Integer.valueOf(req.getParameter("y"));
 
+        GeoLocation location = new GeoLocation() {
+            @Override
+            public long getX() { return x; }
+            @Override
+            public long getY() { return y; }
+        };
+
         try {
             resp.setContentType("application/json;charset=UTF-8");
-            var response = service.findNearestConfiguration(x, y, productsMap);
+            var response = service.findNearestConfiguration(location, productsMap);
             mapper.writeValue(resp.getOutputStream(), response);
             logger.info("WarehouseServlet GET response:\n" + mapper.writerWithDefaultPrettyPrinter().writeValueAsString(response));
         } catch (Exception e) {

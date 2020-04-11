@@ -31,7 +31,8 @@
         <property name="hbm2ddl.auto">validate</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="dev.onichimiuk.marcin.warehouse.Warehouse"/>
+        <mapping class="dev.onichimiuk.marcin.warehouse.model.Warehouse"/>
+        <mapping class="dev.onichimiuk.marcin.warehouse.model.ProductStock"/>
 
     </session-factory>
 
