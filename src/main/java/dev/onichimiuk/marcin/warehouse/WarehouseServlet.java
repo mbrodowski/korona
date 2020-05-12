@@ -2,6 +2,7 @@ package dev.onichimiuk.marcin.warehouse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.onichimiuk.marcin.geolocation.GeoLocation;
+import dev.onichimiuk.marcin.warehouse.dto.OrderItemDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.servlet.annotation.WebServlet;
@@ -30,6 +31,12 @@ public class WarehouseServlet extends HttpServlet {
     public WarehouseServlet(WarehouseService service, ObjectMapper mapper) {
         this.service = service;
         this.mapper = mapper;
+    }
+
+    //TODO zmienić WebServlet na RestController
+    public List<OrderItemDTO> findNearestConfiguration(List<OrderItemDTO> items) {
+        //TODO znaleźć magazyny i zwrócić
+        return null;
     }
 
     // Jako zmienne x, y - przyjąłem współrzędne geograficzne miast Polski ze stopniami i minutami bez znaczników
